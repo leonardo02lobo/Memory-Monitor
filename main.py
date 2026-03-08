@@ -6,7 +6,7 @@ from process_scanner import analyze_process
 def main():
     print("=" * 10 + " MEMORY MONITOR " + "=" * 10)
     print(InformationMemory())
-    print("=" * 30)
+    print("=" * 30, end="\n\n")
 
     result = ListDirectory()
 
@@ -15,9 +15,8 @@ def main():
         return
 
     description, pid = result
-    print(description)
-    print("=" * 30)
-
+    print(description, end="\n\n")
+    
     print(analyze_process(pid))
 
 
